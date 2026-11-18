@@ -1,0 +1,94 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.9/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:generateDebugBuildConfig
+> Task :app:generateDebugResValues
+> Task :app:checkDebugAarMetadata
+> Task :app:mapDebugSourceSetPaths
+> Task :app:generateDebugResources
+> Task :app:packageDebugResources
+> Task :app:mergeDebugResources
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug
+> Task :app:parseDebugLocalResources
+
+> Task :app:processDebugMainManifest
+/home/runner/work/Chinu-ai-/Chinu-ai-/app/src/main/AndroidManifest.xml:30:5-85 Warning:
+	Element uses-feature#android.hardware.camera at AndroidManifest.xml:30:5-85 duplicated with element declared at AndroidManifest.xml:20:5-85
+
+> Task :app:processDebugManifest
+> Task :app:javaPreCompileDebug
+> Task :app:mergeDebugShaders
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:processDebugManifestForPackage
+> Task :app:processDebugResources
+> Task :app:mergeDebugAssets
+> Task :app:desugarDebugFileDependencies
+> Task :app:checkDebugDuplicateClasses
+> Task :app:mergeDebugJniLibFolders
+> Task :app:mergeLibDexDebug
+> Task :app:compressDebugAssets
+> Task :app:validateSigningDebug
+> Task :app:writeDebugAppMetadata
+> Task :app:mergeDebugNativeLibs
+> Task :app:writeDebugSigningConfigVersions
+
+> Task :app:stripDebugDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libjnidispatch.so, libvosk.so.
+
+> Task :app:mergeExtDexDebug
+
+> Task :app:compileDebugKotlin
+e: file:///home/runner/work/Chinu-ai-/Chinu-ai-/app/src/main/java/com/meraassistant/Bday.kt:466:7 Redeclaration:
+class ConfettiView : View
+e: file:///home/runner/work/Chinu-ai-/Chinu-ai-/app/src/main/java/com/meraassistant/ConfettiView.kt:13:7 Redeclaration:
+class ConfettiView : View
+e: file:///home/runner/work/Chinu-ai-/Chinu-ai-/app/src/main/java/com/meraassistant/ConfettiView.kt:39:13 Unresolved reference 'pieces'.
+e: file:///home/runner/work/Chinu-ai-/Chinu-ai-/app/src/main/java/com/meraassistant/ConfettiView.kt:60:13 Unresolved reference 'pieces'.
+e: file:///home/runner/work/Chinu-ai-/Chinu-ai-/app/src/main/java/com/meraassistant/ConfettiView.kt:64:9 Unresolved reference 'clock'.
+e: file:///home/runner/work/Chinu-ai-/Chinu-ai-/app/src/main/java/com/meraassistant/ConfettiView.kt:66:19 Method 'iterator()' is ambiguous for this expression. Applicable candidates:
+fun <T> Enumeration<T>.iterator(): Iterator<T>
+fun <T> Iterator<T>.iterator(): Iterator<T>
+fun <K, V> Map<out K, V>.iterator(): Iterator<Map.Entry<K, V>>
+fun <K, V> MutableMap<K, V>.iterator(): MutableIterator<MutableMap.MutableEntry<K, V>>
+fun CharSequence.iterator(): CharIterator
+fun BufferedInputStream.iterator(): ByteIterator
+e: file:///home/runner/work/Chinu-ai-/Chinu-ai-/app/src/main/java/com/meraassistant/ConfettiView.kt:66:19 Unresolved reference 'pieces'.
+e: file:///home/runner/work/Chinu-ai-/Chinu-ai-/app/src/main/java/com/meraassistant/ConfettiView.kt:67:32 Unresolved reference 'clock'.
+e: file:///home/runner/work/Chinu-ai-/Chinu-ai-/app/src/main/java/com/meraassistant/ConfettiView.kt:67:65 None of the following candidates is applicable:
+fun BigDecimal.times(other: BigDecimal): BigDecimal
+fun BigInteger.times(other: BigInteger): BigInteger
+e: file:///home/runner/work/Chinu-ai-/Chinu-ai-/app/src/main/java/com/meraassistant/ConfettiView.kt:74:34 None of the following candidates is applicable:
+fun BigDecimal.div(other: BigDecimal): BigDecimal
+fun BigInteger.div(other: BigInteger): BigInteger
+e: file:///home/runner/work/Chinu-ai-/Chinu-ai-/app/src/main/java/com/meraassistant/ConfettiView.kt:74:44 None of the following candidates is applicable:
+fun BigDecimal.div(other: BigDecimal): BigDecimal
+fun BigInteger.div(other: BigInteger): BigInteger
+e: file:///home/runner/work/Chinu-ai-/Chinu-ai-/app/src/main/java/com/meraassistant/ConfettiView.kt:77:9 Unresolved reference 'pieces'.
+e: file:///home/runner/work/Chinu-ai-/Chinu-ai-/app/src/main/java/com/meraassistant/ConfettiView.kt:77:16 Cannot infer type for this parameter. Please specify it explicitly.
+e: file:///home/runner/work/Chinu-ai-/Chinu-ai-/app/src/main/java/com/meraassistant/ConfettiView.kt:77:26 Cannot infer type for this parameter. Please specify it explicitly.
+e: file:///home/runner/work/Chinu-ai-/Chinu-ai-/app/src/main/java/com/meraassistant/ConfettiView.kt:77:31 Unresolved reference 'y'.
+e: file:///home/runner/work/Chinu-ai-/Chinu-ai-/app/src/main/java/com/meraassistant/ConfettiView.kt:78:13 Unresolved reference 'pieces'.
+
+> Task :app:compileDebugKotlin FAILED
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run_2-1794977197103.json
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:compileDebugKotlin'.
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+   > Compilation error. See log for more details
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 40s
+29 actionable tasks: 29 executed
