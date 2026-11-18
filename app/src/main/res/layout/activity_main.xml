@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_app">
+
+    <LinearLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- ───── Header: avatar · name · status · settings ───── -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingTop="6dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="6dp">
+
+            <com.meraassistant.BirdView
+                android:id="@+id/bird"
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:clickable="true"
+                android:contentDescription="Talk to Chinu"
+                android:focusable="true" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Chinu"
+                    android:textColor="@color/text"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:id="@+id/statusDot"
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:layout_marginRight="6dp"
+                        android:background="@drawable/dot_online" />
+
+                    <TextView
+                        android:id="@+id/statusText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:text="Online"
+                        android:textColor="@color/text2"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/closetButton"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/bg_round"
+                android:contentDescription="Closet"
+                android:gravity="center"
+                android:text="👗"
+                android:textSize="19sp" />
+
+            <TextView
+                android:id="@+id/coupleButton"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/bg_round"
+                android:contentDescription="Couple"
+                android:gravity="center"
+                android:text="💞"
+                android:textSize="19sp" />
+
+            <ImageView
+                android:id="@+id/settingsButton"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:background="@drawable/bg_round"
+                android:contentDescription="Settings"
+                android:padding="10dp"
+                android:src="@drawable/ic_settings" />
+        </LinearLayout>
+
+        <!-- 🎂 Birthday countdown pill -->
+        <LinearLayout
+            android:id="@+id/countdownCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/bg_tile"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="14dp"
+            android:paddingTop="10dp"
+            android:paddingRight="14dp"
+            android:paddingBottom="10dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🎂"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/countdownTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/text2"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/countdownTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/text"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <!-- ───── Conversation ───── -->
+        <ScrollView
+            android:id="@+id/chatScroll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:fillViewport="true"
+            android:paddingBottom="8dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/chatList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp">
+
+                <!-- Empty state: big parakeet + greeting + quick actions -->
+                <LinearLayout
+                    android:id="@+id/emptyState"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingTop="12dp">
+
+                    <com.meraassistant.BirdView
+                        android:id="@+id/heroBird"
+                        android:layout_width="210dp"
+                        android:layout_height="190dp"
+                        android:clickable="true"
+                        android:contentDescription="Talk to Chinu"
+                        android:focusable="true" />
+
+                    <TextView
+                        android:id="@+id/greetingText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:textColor="@color/text"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/subtitleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:gravity="center"
+                        android:text="Ask me anything, or tell me what to do.\nSay “Hey Chinu” anytime."
+                        android:textColor="@color/text2"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:id="@+id/specials"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal" />
+
+                    <LinearLayout
+                        android:id="@+id/suggestions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:orientation="vertical" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- Live transcript while listening -->
+        <TextView
+            android:id="@+id/heardText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="22dp"
+            android:paddingRight="22dp"
+            android:paddingBottom="6dp"
+            android:textColor="@color/text2"
+            android:textSize="15sp"
+            android:textStyle="italic"
+            android:visibility="gone" />
+
+        <!-- ───── Input bar ───── -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="10dp">
+
+            <EditText
+                android:id="@+id/inputText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_input"
+                android:hint="Message Chinu…"
+                android:imeOptions="actionSend"
+                android:inputType="textCapSentences"
+                android:maxLines="4"
+                android:minHeight="52dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="12dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="12dp"
+                android:textColor="@color/text"
+                android:textColorHint="@color/text2"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/sendButton"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/bg_send"
+                android:contentDescription="Speak or send"
+                android:elevation="3dp"
+                android:padding="14dp"
+                android:src="@drawable/ic_mic" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.meraassistant.ConfettiView
+        android:id="@+id/confetti"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</FrameLayout>

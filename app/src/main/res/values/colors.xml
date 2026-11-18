@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Apple-style light colors -->
+    <color name="bg">#FFF4F6F5</color>
+    <color name="card">#FFFFFFFF</color>
+    <color name="text">#FF1C1C1E</color>
+    <color name="text2">#FF8E8E93</color>
+    <color name="separator">#33000000</color>
+    <color name="accent">#FF34C759</color>
+    <color name="blue">#FF007AFF</color>
+    <color name="chip">#FFFFFFFF</color>
+    <color name="pressed">#14000000</color>
+    <color name="accent2">#FF20A847</color>
+    <color name="bubbleText">#FFFFFFFF</color>
+    <color name="appTop">#FFFFF3F8</color>
+    <color name="appBottom">#FFEFFBF4</color>
+    <!-- 💧 liquid glass -->
+    <color name="glassFill">#9EFFFFFF</color>
+    <color name="glassRim">#F2FFFFFF</color>
+    <color name="glassShine">#80FFFFFF</color>
+    <color name="glassEdge">#40FFFFFF</color>
+    <color name="clear">#00FFFFFF</color>
+</resources>

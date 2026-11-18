@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Chinu</string>
+    <string name="tile_label">Chinu</string>
+    <string name="accessibility_desc">Lets Chinu control your phone by voice: screenshots, lock, home, back, scrolling, notifications and auto-sending WhatsApp messages. Chinu never stores or shares what is on your screen.</string>
+    <string name="features">💞 Hugs, kisses, love notes, Touch Together &amp; Love Wheel between Chiku and Komal\n👠 Komal\'s Closet: new heels &amp; tops every day, unlocked by winning a game\n🐦 Say \"Hi Chinu\" anytime — a small card with the green bird pops up on any screen
+🗣️ Every answer is spoken out loud and shown on screen
+🧠 Ask anything (\"Narendra Modi kaun hai?\") in any language
+📞 Calls by name — emojis in contact names are ignored
+💬 WhatsApp messages, sent automatically
+📸 Screenshot of any app (\"WhatsApp ka screenshot lo\")
+🔒 Lock · Home · Back · Notifications · Scroll · Split screen
+🎵 Plays any song by itself — YT Music, Spotify, YouTube or any app\n⏰ Alarms · Timers · Torch · Volume · Music controls
+⚙️ Turns settings ON/OFF: WiFi · Bluetooth · Hotspot · Data · Location · DND · Airplane · Auto-rotate · Dark mode
+🔋 Battery · Date · Time · Calculator · Navigation · Camera
+🎂 Birthday countdown and midnight wishes
+🌐 12 languages</string>
+</resources>
