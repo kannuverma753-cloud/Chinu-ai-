@@ -1,0 +1,23 @@
+name: Show Source
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  src:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Decode and push source
+        run: |
+          sed -n "/<<'EOF_CHINU_B64'/,/^ *EOF_CHINU_B64$/p" .github/workflows/build.yml | sed '1d;$d' | tr -d ' ' > /tmp/b64.txt
+          base64 -d /tmp/b64.txt | gunzip > /tmp/make.sh
+          rm -rf .github
+          bash -e /tmp/make.sh
+          rm -rf .github
+          cp /tmp/make.sh make_chinu.sh
+          git config user.name chinu-bot
+          git config user.email chinu-bot@users.noreply.github.com
+          git checkout --orphan source
+          git add -A
+          git commit -q -m "decoded source"
+          git push -f origin source
